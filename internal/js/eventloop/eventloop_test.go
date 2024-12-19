@@ -199,7 +199,7 @@ func TestEventLoopRejectGoError(t *testing.T) {
 		return err
 	})
 	loop.WaitOnRegistered()
-	require.EqualError(t, err, "Uncaught (in promise) GoError: some error\n\tat go.k6.io/k6/js/eventloop_test.TestEventLoopRejectGoError.func1 (native)\n\tat <eval>:1:31(2)\n")
+	require.EqualError(t, err, "Uncaught (in promise) GoError: some error\n\tat go.k6.io/k6/internal/js/eventloop_test.TestEventLoopRejectGoError.func1 (native)\n\tat <eval>:1:31(2)\n")
 }
 
 func TestEventLoopRejectThrow(t *testing.T) {
@@ -216,7 +216,7 @@ func TestEventLoopRejectThrow(t *testing.T) {
 		return err
 	})
 	loop.WaitOnRegistered()
-	require.EqualError(t, err, "Uncaught (in promise) GoError: throw error\n\tat go.k6.io/k6/js/eventloop_test.TestEventLoopRejectThrow.func1 (native)\n\tat <eval>:1:31(2)\n")
+	require.EqualError(t, err, "Uncaught (in promise) GoError: throw error\n\tat go.k6.io/k6/internal/js/eventloop_test.TestEventLoopRejectThrow.func1 (native)\n\tat <eval>:1:31(2)\n")
 }
 
 func TestEventLoopAsyncAwait(t *testing.T) {
