@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-const projectRootPath = "../../"
+const projectRootPath = "../../../"
 
 // TestGRPCInputOutput runs same k6's scripts that we have in example folder
 // it check that output contains/not contains cetane things
@@ -90,7 +90,7 @@ func TestGRPCInputOutput(t *testing.T) {
 
 	// Read the proto file from the testutils package
 	// it's same that we use in the examples
-	proto, err := os.ReadFile(projectRootPath + "lib/testutils/grpcservice/route_guide.proto") //nolint:forbidigo
+	proto, err := os.ReadFile(projectRootPath + "internal/lib/testutils/grpcservice/route_guide.proto") //nolint:forbidigo
 	require.NoError(t, err)
 
 	for name, test := range tc {
