@@ -8,7 +8,7 @@ import (
 
 	"github.com/grafana/sobek"
 
-	"go.k6.io/k6/loader"
+	"go.k6.io/k6/internal/loader"
 )
 
 // Require is the actual call that implements require
